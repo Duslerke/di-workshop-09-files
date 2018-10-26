@@ -48,7 +48,9 @@ var fileContents = fs.readFileSync('names.txt')
 console.log(fileContents)
 ```
 
-Before you run the code, read it carefully. **What do you think it’ll do?**
+Before you run the code, read it carefully. **What do you think it’ll do?** 
+
+Expected words list.
 
 Run the code in your terminal with `node part-1.js`. **What happened? Was it
 what you expected?**
@@ -69,8 +71,16 @@ Run your code and see what the difference is. So some research to answer these
 questions:
 
 - **What does utf-8 mean**
+
+UTF-8 is a variable width character encoding capable of encoding all 1,112,064[1] valid code points in Unicode using one to four 8-bit bytes.
+
 - **Why does adding it change what our code does?**
+
+It probably deciphers these Buffer numbers from HDD.
+
 - Extra: **what other things could we try adding instead of `utf-8`?**
+	UTF-1
+
 
 Now, `readFileSync` should be returning a _string_ containing the contents of
 our file.
@@ -78,13 +88,19 @@ our file.
 Complete the following tasks:
 
 - Split the file string into an _array of lines_
-  - If you're unsure about this, try searching for something like 'javascript
-    split string into lines'
+  - If you're unsure about this, try searching for something like 'javascript split string into lines'
+
 - Reverse the array of lines
   - Again, if you're not sure about this, try a search engine! 'javascript
-    reverse array' is probably a good bet
+    reverse array' is probably a good 
+
+    arr.reverse()
+
 - Join the array of lines back together again
   - Try coming up wiuth your own search for this one ;)
+
+  Can do it with "for loop" or array.join(separator)
+
 
 Now we’ve reversed the names, we can look at _writing_ (saving) the file.
 
